@@ -20,8 +20,12 @@ const Header = () => {
             <img 
               src="/lovable-uploads/de8440b6-d4c2-4ed7-b9a1-3cd25ec27c01.png" 
               alt="MM Pro Biz Services" 
-              className="h-12 w-auto"
+              className="h-16 w-auto object-contain brightness-0 invert dark:brightness-100 dark:invert-0"
             />
+            <div className="flex flex-col">
+              <span className="font-heading font-bold text-xl text-foreground">MM PRO BIZ</span>
+              <span className="text-sm text-primary font-medium">SERVICES</span>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
