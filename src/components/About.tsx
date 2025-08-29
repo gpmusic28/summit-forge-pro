@@ -45,8 +45,7 @@ const About = () => {
             <div className="relative">
               <Quote className="absolute -top-4 -left-4 w-8 h-8 text-primary/30" />
               <p className="text-lg leading-relaxed text-muted-foreground pl-8">
-                I am <span className="font-semibold text-primary">Marion Manuel</span>, and as a professional coach, 
-                my role is as your guide, assisting you to improve your life, health, relationships, 
+                As a professional coach, my role is as your guide, assisting you to improve your life, health, relationships, 
                 performance, business, and achieve your goals.
               </p>
             </div>

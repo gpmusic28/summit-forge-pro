@@ -98,7 +98,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  We typically respond to all inquiries within 24 hours during business days.
+                  We typically respond to all inquiries within 48 hours during business days.
                 </p>
               </CardContent>
             </Card>

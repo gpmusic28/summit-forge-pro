@@ -23,11 +23,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-20">
         <div className="max-w-4xl">
-          {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-8 animate-fade-up">
-            <Star className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Premium Consulting Services</span>
-          </div>
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 animate-fade-up">
@@ -62,21 +57,6 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-fade-up">
-            <div className="text-center md:text-left">
-              <div className="text-3xl font-heading font-bold text-gradient mb-2">15+</div>
-              <div className="text-muted-foreground">Years Experience</div>
-            </div>
-            <div className="text-center md:text-left">
-              <div className="text-3xl font-heading font-bold text-gradient mb-2">500+</div>
-              <div className="text-muted-foreground">Clients Transformed</div>
-            </div>
-            <div className="text-center md:text-left">
-              <div className="text-3xl font-heading font-bold text-gradient mb-2">98%</div>
-              <div className="text-muted-foreground">Success Rate</div>
-            </div>
-          </div>
         </div>
       </div>
 

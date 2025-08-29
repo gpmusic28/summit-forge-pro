@@ -20,9 +20,9 @@ const Services = () => {
       title: "Human Resource Consultancy",
       description: "Enhance your workforce's performance with comprehensive HR solutions including talent acquisition, employee engagement, compliance, and training programs.",
       features: [
-        "Talent acquisition strategies",
-        "Employee engagement programs",
-        "Compliance management",
+        "Employee & Industrial Relations",
+        "Organisation Design & Outsourcing", 
+        "HR ComplianceManagement",
         "Training and development"
       ]
     },
