@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    // Optional: show toast immediately
     toast({
       title: "Message Sent!",
       description: "Thank you for your interest. Marion will contact you within 24 hours.",
@@ -114,6 +114,7 @@ const Contact = () => {
                   method="POST"
                   data-netlify="true"
                   netlify-honeypot="bot-field"
+                  action="/thank-you"
                   onSubmit={handleSubmit}
                   className="space-y-6"
                 >
