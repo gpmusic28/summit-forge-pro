@@ -18,55 +18,27 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/de8440b6-d4c2-4ed7-b9a1-3cd25ec27c01.png" 
+              src="/logo.svg" 
               alt="MM Pro Biz Services" 
-              className="h-12 w-auto"
+              className="h-16 w-auto" 
             />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Home
-            </button>
-            <button 
-              onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Services
-            </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              About
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Contact
-            </button>
+            <button onClick={() => scrollToSection('home')} className="text-foreground hover:text-primary transition-colors font-medium">Home</button>
+            <button onClick={() => scrollToSection('services')} className="text-foreground hover:text-primary transition-colors font-medium">Services</button>
+            <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors font-medium">About</button>
+            <button onClick={() => scrollToSection('contact')} className="text-foreground hover:text-primary transition-colors font-medium">Contact</button>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
-            >
-              Get Started
-            </Button>
+            <Button onClick={() => scrollToSection('contact')} className="bg-gradient-primary hover:shadow-glow transition-all duration-300">Get Started</Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -75,36 +47,11 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-border/50">
             <div className="flex flex-col space-y-4 pt-4">
-              <button 
-                onClick={() => scrollToSection('home')}
-                className="text-left text-foreground hover:text-primary transition-colors font-medium"
-              >
-                Home
-              </button>
-              <button 
-                onClick={() => scrollToSection('services')}
-                className="text-left text-foreground hover:text-primary transition-colors font-medium"
-              >
-                Services
-              </button>
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="text-left text-foreground hover:text-primary transition-colors font-medium"
-              >
-                About
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="text-left text-foreground hover:text-primary transition-colors font-medium"
-              >
-                Contact
-              </button>
-              <Button 
-                onClick={() => scrollToSection('contact')}
-                className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 mt-4"
-              >
-                Get Started
-              </Button>
+              <button onClick={() => scrollToSection('home')} className="text-left text-foreground hover:text-primary transition-colors font-medium">Home</button>
+              <button onClick={() => scrollToSection('services')} className="text-left text-foreground hover:text-primary transition-colors font-medium">Services</button>
+              <button onClick={() => scrollToSection('about')} className="text-left text-foreground hover:text-primary transition-colors font-medium">About</button>
+              <button onClick={() => scrollToSection('contact')} className="text-left text-foreground hover:text-primary transition-colors font-medium">Contact</button>
+              <Button onClick={() => scrollToSection('contact')} className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 mt-4">Get Started</Button>
             </div>
           </nav>
         )}
