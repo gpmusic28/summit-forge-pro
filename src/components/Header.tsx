@@ -20,7 +20,7 @@ const Header = () => {
             <img 
               src="/logo.svg" 
               alt="MM Pro Biz Services" 
-              className="h-16 w-auto" 
+              className="h-10 w-auto" 
             />
           </div>
 
