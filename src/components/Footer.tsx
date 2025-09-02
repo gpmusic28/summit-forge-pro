@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="md:col-span-2">
             <img 
-              src="/lovable-uploads/de8440b6-d4c2-4ed7-b9a1-3cd25ec27c01.png" 
+              src="/logo.svg" 
               alt="MM Pro Biz Services" 
               className="h-12 w-auto mb-4 brightness-0 invert"
             />
