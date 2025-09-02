@@ -110,25 +110,58 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <form
-  name="contact"
-  method="POST"
-  data-netlify="true"
-  action="/thank-you"
->
-  {/* Netlify hidden input */}
-  <input type="hidden" name="form-name" value="contact" />
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  action="/thank-you"
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
+                  {/* Hidden fields for Netlify */}
+                  <input type="hidden" name="form-name" value="contact" />
+                  <input type="hidden" name="bot-field" />
 
-  {/* keep your old form fields here, don’t change their markup */}
-  {/*
-    Example:
-    <input type="text" name="name" placeholder="Your name" required />
-    <input type="email" name="email" placeholder="Your email" required />
-    <textarea name="message" placeholder="Your message" required></textarea>
-  */}
+                  {/* Name & Email */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium mb-2">Full Name *</label>
+                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Your full name" className="w-full" />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium mb-2">Email Address *</label>
+                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="your@email.com" className="w-full" />
+                    </div>
+                  </div>
 
-  <button type="submit">Send Message</button>
-</form>
+                  {/* Phone & Service */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium mb-2">Phone Number</label>
+                      <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+60 12 345 6789" className="w-full" />
+                    </div>
+                    <div>
+                      <label htmlFor="service" className="block text-sm font-medium mb-2">Service of Interest</label>
+                      <select id="service" name="service" value={formData.service} onChange={handleChange} className="w-full h-10 px-3 rounded-md border border-input bg-background text-foreground">
+                        <option value="">Select a service</option>
+                        <option value="change-management">Change Management</option>
+                        <option value="hr-consultancy">HR Consultancy</option>
+                        <option value="life-coaching">Life Coaching</option>
+                        <option value="business-coaching">Business Coaching</option>
+                        <option value="estate-planning">Estate Planning</option>
+                        <option value="multiple">Multiple Services</option>
+                      </select>
+                    </div>
+                  </div>
 
+                  {/* Message */}
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium mb-2">Message *</label>
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="Tell us about your goals..." rows={5} className="w-full" />
+                  </div>
+
+                  <Button type="submit" size="lg" className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300">Send Message</Button>
+                </form>
               </CardContent>
             </Card>
           </div>
