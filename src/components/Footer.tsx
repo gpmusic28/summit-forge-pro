@@ -17,7 +17,7 @@ const Footer = () => {
             <img 
               src="/logo.svg" 
               alt="MM Pro Biz Services" 
-              className="h-12 w-auto mb-4 brightness-0 invert"
+              className="h-12 w-auto mb-4"
             />
             <p className="text-background/80 mb-4 max-w-md">
               Comprehensive consulting services to unlock your organization's full potential. 
