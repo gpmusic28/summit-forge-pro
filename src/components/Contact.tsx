@@ -65,6 +65,23 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-6">
+
+        {/* Hidden static form for Netlify detection */}
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          hidden
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="text" name="phone" />
+          <input type="text" name="service" />
+          <textarea name="message"></textarea>
+        </form>
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
@@ -155,7 +172,6 @@ const Contact = () => {
                   onSubmit={handleSubmit}
                   className="space-y-6"
                 >
-                  {/* Hidden fields for Netlify */}
                   <input type="hidden" name="form-name" value="contact" />
                   <input type="hidden" name="bot-field" />
 
