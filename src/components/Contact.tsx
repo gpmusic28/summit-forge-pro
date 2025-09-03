@@ -114,7 +114,7 @@ const Contact = () => {
                   href="tel:+601274775853"
                   className="text-primary font-semibold hover:text-primary-glow transition-colors"
                 >
-                  +60 12 747 5853
+                  +60 12 3171408
                 </a>
               </CardContent>
             </Card>
@@ -312,7 +312,7 @@ const Contact = () => {
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
               onClick={() => window.open("tel:+601274775853", "_self")}
             >
-              Call Now: +60 12 747 5853
+              Call Now: +60 12 3171408
             </Button>
             <Button
               size="lg"
